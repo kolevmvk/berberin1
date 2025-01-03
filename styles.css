@@ -144,7 +144,7 @@ body {
         width: 40px;
     }
     .header-float .name h2 {
-        font-size: 25px; /* Smanjuje veličinu slova na mobilnim uređajima */
+        font-size: 30px; /* Smanjuje veličinu slova na mobilnim uređajima */
         text-align: center;
         text-transform: uppercase;
     }
