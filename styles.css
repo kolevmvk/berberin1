@@ -112,8 +112,9 @@ body {
 }
 
 .kontakt-ikonice i {
-    color: rgb(61, 4, 185);
+    color: rgb(235, 235, 236);
     font-size: 30px;
+    
     padding: 5px;
     border: 2px solid rgb(61, 4, 185);
     border-radius: 40%;
@@ -162,7 +163,7 @@ body {
     
     }
     .kontakt-ikonice i {
-        font-size: 20px;
+        font-size: 30px;
     
     }
     .shadow-sm {
