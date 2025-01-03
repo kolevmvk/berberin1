@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="sr" class="nova-tema">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berbernica Filip - Responzivna verzija</title>
+
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/assets/slike/favicon.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.11.0/main.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Homenaje&family=Literata:ital,opsz,wght@0,7..72,200..900;
+    1,7..72,200..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+
+
+
+</head>
+
+<body>
+    <!-- Header sa ikonama -->
+    <header class="header-float">
+        <div class="lg-name">
+            <div class="logo">
+                <a class="navbar-brand text-white" href="/">
+                    <img src="/assets/slike/logoberber.webp" alt="Logo Berbernice" height="80">
+
+                </a>
+
+            </div>
+            <div class="name">
+                <h2> Berbernica Stefan </h2>
+            </div>
+        </div>
+        <div class="kontakt-ikonice">
+            <a href="tel:+381601234567">
+                <i class="fas fa-phone" alt="Telefon"></i>
+            </a>
+            <a href="viber://chat?number=+381601234567">
+                <i class="fa-brands fa-viber" alt="Viber"></i>
+            </a>
+            <a href="mailto:kontakt@berbernica.rs">
+                <i class="fa-solid fa-envelope" alt="Email"></i>
+            </a>
+            <a href="https://www.instagram.com/berbernica" target="_blank">
+                <i class="fa-brands fa-instagram" alt="Instagram"></i>
+            </a>
+            <a href="https://www.tiktok.com/@berbernica" target="_blank">
+                <i class="fa-brands fa-tiktok" alt="TikTok"></i>
+            </a>
+            <a href="https://www.facebook.com/berbernica" target="_blank">
+                <i class="fa-brands fa-facebook" alt="Facebook"></i>
+            </a>
+        </div>
+    </header>
+
+
+    <!-- Hero sekcija -->
+    <section class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Leva strana sa tekstom -->
+                <div class="col-md-6 text-center text-md-start hero-content">
+                    <h1 class="display-5 fw-bold">Istaknite svoj stil!</h1>
+                    <p class="lead">Kvalitet koji ne prolazi nezapaženo.</p>
+                    <a href="/katalog" class="btn dugme mt-3">Zakaži Odmah</a>
+                </div>
+                <!-- Desna strana sa slikom -->
+                <div class="col-md-6 text-center">
+                    <img src="/assets/slike/hero-image.jpg" alt="Berbernica slika">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Sekcija kolekcija sa kalendarom -->
+    <section class="py-5">
+        <div class="subhero">
+            <div class="container">
+                <h2 class="text-center mb-4">Naše usluge i zakazivanje termina</h2>
+                <div class="row">
+                    <!-- Leva strana sa kolekcijama -->
+                    <div class="col-md-6">
+                        <div class="row g-4">
+                            <div class="col-12">
+                                <div class="collection_item bg-light text-center p-4 shadow-sm">
+                                    <a href="/collections/deodorants" class="text-decoration-none">
+                                        <h3 class="collection_title">ŠIŠANJE</h3>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="collection_item bg-light text-center p-4 shadow-sm">
+                                    <a href="/collections/facial-toners" class="text-decoration-none">
+                                        <h3 class="collection_title">ŠIŠANJE &amp BRIJANJE</h3>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="collection_item bg-light text-center p-4 shadow-sm">
+                                    <a href="/collections/face-scrubs" class="text-decoration-none">
+                                        <h3 class="collection_title">BRIJANJE</h3>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="collection_item bg-light text-center p-4 shadow-sm">
+                                    <a href="/collections/face-scrubs" class="text-decoration-none">
+                                        <h3 class="collection_title">PRANJE KOSE</h3>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Desna strana sa kalendarom -->
+                    <div class="col-md-6">
+                        <div class="bg-light p-4 shadow-sm">
+                            <h4 class="text-center">Zakazivanje termina</h4>
+                            <div id="calendar" class="calendar-container mb-3"></div>
+                            <form class="mt-3">
+                                <div class="mb-3">
+                                    <label for="selected-date" class="form-label">Izaberite datum:</label>
+                                    <input type="text" class="form-control" id="selected-date"
+                                        placeholder="Kliknite na datum" readonly required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="selected-time" class="form-label">Izaberite vreme:</label>
+                                    <input type="time" class="form-control" id="selected-time" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="user-name" class="form-label">Ime i prezime:</label>
+                                    <input type="text" class="form-control" id="user-name" placeholder="Vaše ime"
+                                        required>
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-primary">Zakaži termin</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Sekcija kolekcija -->
+    <section class="py-5">
+        <div class="collection">
+            <div class="container">
+                <h2 class="text-center mb-4">Naše kolekcije</h2>
+                <div class="row g-4">
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="collection_item bg-light text-center p-4 shadow-sm">
+                            <a href="/collections/deodorants" class="text-decoration-none">
+                                <h3 class="collection_title">NEGA KOSE</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="collection_item bg-light text-center p-4 shadow-sm">
+                            <a href="/collections/facial-toners" class="text-decoration-none">
+                                <h3 class="collection_title">NEGA LICA</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="collection_item bg-light text-center p-4 shadow-sm">
+                            <a href="/collections/face-scrubs" class="text-decoration-none">
+                                <h3 class="collection_title">RAZNO</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontakt forma sa mapom -->
+    <section class="py-5 bg-light">
+
+        <div class="container">
+            <h2 class="text-center mb-4">Kontakt forma i adresa</h2>
+            <div class="row align-items-center">
+                <!-- Leva strana sa kontakt formom -->
+                <div class="col-md-6">
+                    <form class="row g-3">
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" placeholder="Unesite ime" required>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="email" class="form-control" placeholder="Unesite email" required>
+                        </div>
+                        <div class="col-12">
+                            <textarea class="form-control" rows="5" placeholder="Vaša poruka" required></textarea>
+                        </div>
+                        <div class="col-12 text-center">
+                            <button type="submit" class="btn btn-primary">Pošalji upit</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- Desna strana sa mapom -->
+                <div class="col-md-6">
+                    <div class="map-container shadow-sm">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345095925!2d144.95373531568088!3d-37.81627974202188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf5777f704bcd5159!2sFederation+Square!5e0!3m2!1sen!2srs!4v1680721345823!5m2!1sen!2srs"
+                            width="100%" height="350" style="border:0; border-radius: 12px;" allowfullscreen=""
+                            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 EllKolle. Sva prava zadržana.</p>
+            <div class="d-flex justify-content-center">
+                <a href="#" class="mx-2">
+                    <img src="/assets/slike/facebook.png" alt="Facebook">
+                </a>
+                <a href="#" class="mx-2">
+                    <img src="/assets/slike/instagram.png" alt="Instagram">
+                </a>
+                <a href="#" class="mx-2">
+                    <img src="/assets/slike/twitter.png" alt="Twitter">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.11.0/main.min.js"></script>
+
+    <script src="scripts.js"></script>
+
+</body>
+
+</html>
