@@ -248,6 +248,12 @@ section.py-5 {
     padding: 20px;
     text-align: center;
 }
+footer a i {
+    font-size: 40px;
+    border: 1px solid white;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.5);
+}
 
 .py-5.bg-light {
     background-color: #1b436ca3 !important; /* Ovo je primer nove boje pozadine */
